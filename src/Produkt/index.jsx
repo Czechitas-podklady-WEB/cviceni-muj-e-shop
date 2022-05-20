@@ -8,7 +8,7 @@ const Produkt = ({id, nazev, popis, skladem, pridatPolozku, odebratPolozku}) => 
             <h1 className="produkt__nazev">{nazev}</h1>
             <div className="produkt__dostupnost">Dostupnost: {skladem > 0 ? 'skladem' : 'nedostupné'}</div>
             <div className="produkt__popis">{popis}</div>
-            <Objednani pridat={() => pridatPolozku(id, nazev)} odebrat={()=> odebratPolozku(id)} />
+            <Objednani maxPocet={skladem} pridat={() => pridatPolozku(id, nazev)} odebrat={()=> odebratPolozku(id)} />
         </div>
     )
 }
