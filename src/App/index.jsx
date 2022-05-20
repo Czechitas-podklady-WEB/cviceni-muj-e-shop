@@ -10,7 +10,7 @@ const App = () => {
     const novyKosik = [...kosik]
     const polozkaVKosiku = novyKosik.find(polozka => polozka.id === id)
     if (polozkaVKosiku === undefined) {
-      novyKosik.push({id: id, nazev: nazev, pocet: 1})
+      novyKosik.push({ id: id, nazev: nazev, pocet: 1 })
     } else {
       polozkaVKosiku.pocet += 1
     }
@@ -29,6 +29,15 @@ const App = () => {
     setKosik(novyKosik)
   }
 
+  const zjistiPocetObjednanych = (id) => {
+    const polozkaVKosiku = kosik.find(polozka => polozka.id === id)
+    if (polozkaVKosiku === undefined) {
+      return 0
+    } else {
+      return polozkaVKosiku.pocet
+    }
+  }
+
   return (
     <>
       <header>
@@ -36,7 +45,7 @@ const App = () => {
         <Kosik kosik={kosik} />
       </header>
       <main>
-        <SeznamProduktu pridatPolozku={pridatPolozku}  odebratPolozku={odebratPolozku}/>
+        <SeznamProduktu zjistiPocetObjednanych={zjistiPocetObjednanych} pridatPolozku={pridatPolozku} odebratPolozku={odebratPolozku} />
       </main>
     </>
   );
