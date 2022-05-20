@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import './style.css'
 
-const Objednani = () => {
+const Objednani = ({pridat}) => {
   const [count, setCount] = useState(0);
 
   const handleIncrement = () => {
     setCount((c) => c + 1);
+    pridat()
   };
 
   const handleDecrement = () => {

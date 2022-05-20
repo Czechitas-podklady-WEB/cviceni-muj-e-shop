@@ -24,8 +24,7 @@ const App = () => {
         <Kosik kosik={kosik} />
       </header>
       <main>
-        <button onClick={() => pridatPolozku(0, 'Test')}>Přidat TEST</button>
-        <SeznamProduktu />
+        <SeznamProduktu pridatPolozku={pridatPolozku}/>
       </main>
     </>
   );

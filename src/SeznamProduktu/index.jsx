@@ -29,11 +29,11 @@ const produkty = [
     },
 ]
 
-const SeznamProduktu = () => {
+const SeznamProduktu = ({pridatPolozku}) => {
     return (
         <div className="seznam-produktu">
             {
-                produkty.map(produkt => <Produkt key={produkt.id} {...produkt}/>)
+                produkty.map(produkt => <Produkt key={produkt.id} pridatPolozku={pridatPolozku} {...produkt}/>)
             }
         </div>
     )
