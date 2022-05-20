@@ -15,7 +15,7 @@ const Objednani = () => {
   return (
     <div className="objednani">
       <button onClick={handleDecrement} disabled={count === 0}>-</button>
-      <input value={count} className="objednani__pocet" />
+      <input value={count} className="objednani__pocet" readOnly/>
       <button onClick={handleIncrement}>+</button>
     </div>
   );

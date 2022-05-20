@@ -5,6 +5,18 @@ import "./style.css";
 
 const App = () => {
   const [kosik, setKosik] = useState([]);
+
+  const pridatPolozku = (id, nazev) => {
+    const novyKosik = [...kosik]
+    const polozkaVKosiku = novyKosik.find(polozka => polozka.id === id)
+    if (polozkaVKosiku === undefined) {
+      novyKosik.push({id: id, nazev: nazev, pocet: 1})
+    } else {
+      polozkaVKosiku.pocet += 1
+    }
+    setKosik(novyKosik)
+  }
+
   return (
     <>
       <header>
@@ -12,6 +24,7 @@ const App = () => {
         <Kosik kosik={kosik} />
       </header>
       <main>
+        <button onClick={() => pridatPolozku(0, 'Test')}>Přidat TEST</button>
         <SeznamProduktu />
       </main>
     </>
