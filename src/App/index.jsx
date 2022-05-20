@@ -17,6 +17,18 @@ const App = () => {
     setKosik(novyKosik)
   }
 
+  const odebratPolozku = (id) => {
+    const index = kosik.findIndex(polozka => polozka.id === id)
+    const polozkaVKosiku = kosik[index]
+    const novyKosik = [...kosik]
+    if (polozkaVKosiku.pocet > 1) {
+      polozkaVKosiku.pocet -= 1
+    } else {
+      novyKosik.splice(index, 1)
+    }
+    setKosik(novyKosik)
+  }
+
   return (
     <>
       <header>
