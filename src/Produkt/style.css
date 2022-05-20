@@ -1,0 +1,27 @@
+.produkt {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    height: 200px;
+    padding: 10px 20px;
+    border: 1px solid silver;
+    border-radius: 10px;
+    box-shadow: 5px 5px rgba(240,240,240,0.5);
+}
+
+.produkt__nazev {
+    margin: 0;
+}
+
+.produkt__popis {
+    flex-grow: 1;
+}
+
+.produkt__dostupnost {
+    margin: 8px 0;
+    font-size: 10px;
+}
+
+.produkt--nedostupny {
+    color: silver;
+}

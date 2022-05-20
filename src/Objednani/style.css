@@ -1,0 +1,8 @@
+.objednani {
+    align-self: center;
+}
+
+.objednani__pocet {
+    width: 5ex;
+    text-align: right;
+}

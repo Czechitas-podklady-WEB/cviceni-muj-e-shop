@@ -1,0 +1,10 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    margin: 40px 0;    
+}
+
+.logo {
+    font-weight: bold;
+    font-style: italic;
+}
