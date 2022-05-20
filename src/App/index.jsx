@@ -36,7 +36,7 @@ const App = () => {
         <Kosik kosik={kosik} />
       </header>
       <main>
-        <SeznamProduktu pridatPolozku={pridatPolozku}/>
+        <SeznamProduktu pridatPolozku={pridatPolozku}  odebratPolozku={odebratPolozku}/>
       </main>
     </>
   );

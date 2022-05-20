@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import './style.css'
 
-const Objednani = ({pridat}) => {
+const Objednani = ({pridat, odebrat}) => {
   const [count, setCount] = useState(0);
 
   const handleIncrement = () => {
@@ -11,6 +11,7 @@ const Objednani = ({pridat}) => {
 
   const handleDecrement = () => {
     setCount((c) => c - 1);
+    odebrat()
   };
 
   return (
